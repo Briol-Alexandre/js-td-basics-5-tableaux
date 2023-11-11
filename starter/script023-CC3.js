@@ -16,14 +16,34 @@
 const factures =[29, 150, 300];
 function calculateurPourboire (facture){
     if (facture<(50)){
-        console.log(facture*0.20);
+        let pbFacture1= facture*0.20
+        console.log(pbFacture1);
+        return pbFacture1;
     }else if (facture>=50&&facture<200){
-        console.log(facture*0.15);
+        let pbFacture2= facture*0.15
+        console.log(pbFacture2);
+        return pbFacture2
     }else if(facture>=200){
-        console.log(facture*0.1);
+        let pbFacture3= facture*0.1
+        console.log(pbFacture3);
+        return pbFacture3;
     }
 }
+const pbFacture1 = calculateurPourboire(factures[0]);
+const pbFacture2 = calculateurPourboire(factures[1]);
+const pbFacture3 = calculateurPourboire(factures[2]);
+const final1= factures[0]-pbFacture1;
+const final2=factures[1]-pbFacture2;
+const final3=factures[2]-pbFacture3;
 
-console.log(calculateurPourboire(factures[0]));
-console.log(calculateurPourboire(factures[1]));
-console.log(calculateurPourboire(factures[2]));
+const pourboires=[];
+pourboires.push(pbFacture1);
+pourboires.push(pbFacture2);
+pourboires.push(pbFacture3);
+console.log(pourboires);
+
+const tableauxFinaux=[];
+tableauxFinaux.push(final1);
+tableauxFinaux.push(final2);
+tableauxFinaux.push(final3);
+console.log(tableauxFinaux);
